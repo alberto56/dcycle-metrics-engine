@@ -6,3 +6,5 @@ RUN apt-get -y install shellcheck
 COPY . /myscript
 
 RUN cd /myscript && shellcheck *.sh
+RUN cd /myscript && shellcheck tests/*.sh
+RUN cd /myscript && shellcheck lib/*.sh
