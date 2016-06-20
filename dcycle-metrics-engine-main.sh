@@ -15,13 +15,13 @@ fi
 
 WORKING="$SCRIPTDIR/tmp/$RUNID/code"
 cp -r "$CODE" "$WORKING"
-cp "$SCRIPTDIR/dockerfile-phpmd" "$WORKING/dockerfile-phpmd"
+cp "$SCRIPTDIR/Dockerfile-phpmd" "$WORKING/Dockerfile-phpmd"
 cp -r "$SCRIPTDIR/docker-resources" "$WORKING/docker-resources"
 LOCALMETRICS="tmp/$RUNID/metrics"
 LOCALMETRICSFULL="$WORKING/$LOCALMETRICS"
 mkdir -p "$LOCALMETRICSFULL"
 
-cd "$WORKING" && docker build -f dockerfile-phpmd -t "$RUNID" .
+cd "$WORKING" && docker build -f Dockerfile-phpmd -t "$RUNID" .
 cd "$WORKING" && docker run --name "$RUNID" "$RUNID"
 
 cd "$WORKING" && docker cp "$RUNID":/metrics "$LOCALMETRICSFULL"
