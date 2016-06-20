@@ -16,7 +16,6 @@ fi
 WORKING="$SCRIPTDIR/tmp/$RUNID/code"
 cp -r "$CODE" "$WORKING"
 cp "$SCRIPTDIR/Dockerfile-phpmd" "$WORKING/Dockerfile-phpmd"
-cp -r "$SCRIPTDIR/docker-resources" "$WORKING/docker-resources"
 LOCALMETRICS="tmp/$RUNID/metrics"
 LOCALMETRICSFULL="$WORKING/$LOCALMETRICS"
 mkdir -p "$LOCALMETRICSFULL"
