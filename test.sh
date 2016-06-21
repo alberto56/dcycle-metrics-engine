@@ -16,14 +16,14 @@ cp "$SCRIPTDIR"/sample-code/sample-001/* "$SCRIPTDIR"/tmp/test-data
 echo -e "[info] running metrics on sample code"
 "$SCRIPTDIR"/dcycle-metrics-engine.sh "$SCRIPTDIR"/tmp/test-data "$SCRIPTDIR"/tmp/test-metrics
 
-echo -e "[info] $SCRIPTDIR/tmp/test-metrics/metrics/raw-xml should now contain metrics"
-cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/*xml
-grep "Else is never necessary" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/cleancode.xml
-cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/codesize.xml
-grep "The class whatever is not named in CamelCase" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/controversial.xml
-cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/design.xml
-grep "Configured minimum length is 3" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/naming.xml
-cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw-xml/unusedcode.xml
+echo -e "[info] $SCRIPTDIR/tmp/test-metrics/metrics/raw/phpmd should now contain metrics"
+cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/*xml
+grep "Else is never necessary" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/cleancode.xml
+cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/codesize.xml
+grep "The class whatever is not named in CamelCase" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/controversial.xml
+cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/design.xml
+grep "Configured minimum length is 3" < "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/naming.xml
+cat "$SCRIPTDIR"/tmp/test-metrics/metrics/raw/phpmd/unusedcode.xml
 
 echo -e "[info] cleaning up"
 rm -rf "$SCRIPTDIR"/tmp/test-*

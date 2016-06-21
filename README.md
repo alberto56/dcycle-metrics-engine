@@ -15,7 +15,7 @@ Usage
 
     cd ./dcycle-metrics-engine
     ./dcycle-metrics-engine.sh /path/to/repo /path/to/metrics
-    cat /path/to/metrics/metrics/raw-xml/*xml
+    cat /path/to/metrics/metrics/raw/phpmd/*xml
 
 Testing
 -----

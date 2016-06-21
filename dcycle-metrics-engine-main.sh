@@ -25,7 +25,6 @@ cd "$WORKING" && docker run --name "$RUNID" "$RUNID"
 
 cd "$WORKING" && docker cp "$RUNID":/metrics "$LOCALMETRICSFULL"
 
-echo -e "[info] $LOCALMETRICSFULL/metrics/raw-xml should now contain xml files."
-echo -e "[info] They will be converted to CSV files."
+echo -e "[info] $LOCALMETRICSFULL/metrics/raw/phpmd should now contain xml files."
 
 cp -r "$LOCALMETRICSFULL" "$METRICS"
