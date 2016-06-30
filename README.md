@@ -17,6 +17,14 @@ Dependencies
 
  * Docker
 
+Installation
+-----
+
+    git clone https://github.com/alberto56/dcycle-metrics-engine.git
+    cd dcycle-metrics-engine
+    git submodule init
+    git submodule update
+
 Usage
 -----
 
