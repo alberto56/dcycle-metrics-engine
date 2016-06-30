@@ -1,9 +1,14 @@
 Dcycle Metrics Engine
 =====
 
-Generates code metrics in these formats:
+Generates code metrics from these providers:
 
- * XML
+ * [PhpMD](https://phpmd.org)
+ * [ShellCheck](https://github.com/koalaman/shellcheck)
+
+And outputs metrics in these formats:
+
+ * raw output from each provider
 
 Dependencies
 -----
@@ -14,8 +19,9 @@ Usage
 -----
 
     cd ./dcycle-metrics-engine
-    ./dcycle-metrics-engine.sh /path/to/repo /path/to/metrics
+    ./dcycle-metrics-engine.sh --source=/path/to/repo --destination=/path/to/metrics
     cat /path/to/metrics/metrics/raw/phpmd/*xml
+    cat /path/to/metrics/metrics/raw/shellcheck/*xml
 
 Testing
 -----

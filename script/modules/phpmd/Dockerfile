@@ -15,8 +15,8 @@ COPY . /repo
 RUN mkdir -p /metrics/raw/phpmd
 RUN find / -name 'PHPMD'
 RUN cd /repo && phpmd . xml cleancode > /metrics/raw/phpmd/cleancode.xml || true
-RUN cd /repo && phpmd . xml codesize > /metrics/raw/phpmd/codesize.xml || true
-RUN cd /repo && phpmd . xml controversial > /metrics/raw/phpmd/controversial.xml || true
-RUN cd /repo && phpmd . xml design > /metrics/raw/phpmd/design.xml || true
-RUN cd /repo && phpmd . xml naming > /metrics/raw/phpmd/naming.xml || true
-RUN cd /repo && phpmd . xml unusedcode > /metrics/raw/phpmd/unusedcode.xml || true
+# RUN cd /repo && phpmd . xml codesize > /metrics/raw/phpmd/codesize.xml || true
+# RUN cd /repo && phpmd . xml controversial > /metrics/raw/phpmd/controversial.xml || true
+# RUN cd /repo && phpmd . xml design > /metrics/raw/phpmd/design.xml || true
+# RUN cd /repo && phpmd . xml naming > /metrics/raw/phpmd/naming.xml || true
+# RUN cd /repo && phpmd . xml unusedcode > /metrics/raw/phpmd/unusedcode.xml || true
