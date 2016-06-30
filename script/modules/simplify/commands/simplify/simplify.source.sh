@@ -37,7 +37,3 @@ cp -r "$GlobalSCRIPTDIR"/script/modules/simplify/docker-resources "$LocalTEMP"/d
 cd "$LocalTEMP" && docker build -f "$LocalDOCKERFILE" -t "$LocalDOCKERIMAGE" .
 cd "$LocalTEMP" && docker run --name "$LocalDOCKERCONTAINER" "$LocalDOCKERIMAGE"
 cd "$GlobalSCRIPTDIR" && docker cp "$LocalDOCKERCONTAINER":/simplified/ "$GlobalSIMPLIFYDESTINATION"
-#
-#
-# echo 'metrics.source.sh nyi'
-# exit 1;

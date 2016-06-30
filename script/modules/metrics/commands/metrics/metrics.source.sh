@@ -23,6 +23,3 @@ echo -e "[info] About to get metrics for the repo at $GlobalMETRICSSOURCE"
 echo -e "[info] Metrics will be placed in $GlobalMETRICSDESTINATION"
 
 invoke-all run-metrics
-
-echo 'metrics.source.sh nyi'
-exit 1;

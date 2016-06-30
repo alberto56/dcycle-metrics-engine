@@ -3,6 +3,8 @@ Dcycle Metrics Engine
 
 Generates code metrics from these providers:
 
+ * [Pdepend](https://pdepend.org)
+ * [PHP copy-paste detector](https://github.com/sebastianbergmann/phpcpd)
  * [PhpMD](https://phpmd.org)
  * [ShellCheck](https://github.com/koalaman/shellcheck)
 
@@ -19,14 +21,13 @@ Usage
 -----
 
     cd ./dcycle-metrics-engine
-    ./dcycle-metrics-engine.sh --source=/path/to/repo --destination=/path/to/metrics
-    cat /path/to/metrics/metrics/raw/phpmd/*xml
-    cat /path/to/metrics/metrics/raw/shellcheck/*xml
+    ./dcycle-metrics-engine.sh metrics --source=tests/sample-code/sample-001 --destination=tmp/test-metrics
+    cat /path/to/metrics/metrics/raw/*/*xml
 
 Testing
 -----
 
-    ./test.sh
+    ./dcycle-metrics-engine.sh self-test
 
 Continuous integration
 -----
