@@ -5,7 +5,6 @@ Generates code metrics from these providers:
 
  * [Pdepend](https://pdepend.org)
  * [PHP copy-paste detector](https://github.com/sebastianbergmann/phpcpd)
- * [PhpMD](https://phpmd.org)
  * [ShellCheck](https://github.com/koalaman/shellcheck)
 
 And outputs metrics in these formats:

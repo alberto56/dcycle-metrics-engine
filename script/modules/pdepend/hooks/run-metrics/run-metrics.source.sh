@@ -1,4 +1,4 @@
-echo '[info] About to get PhpMD metrics'
+echo '[info] About to get pDepend metrics'
 
 LocalTEMP=$(tmp)
 LocalID=$(uuid)
@@ -7,7 +7,7 @@ LocalDOCKERIMAGE=$(uuid)
 LocalDOCKERCONTAINER=$(uuid)
 
 cd "$GlobalSCRIPTDIR" && cp -r "$GlobalMETRICSSOURCE"/* "$LocalTEMP"
-cp -r "$GlobalSCRIPTDIR"/script/modules/phpmd/Dockerfile "$LocalTEMP"/"$LocalDOCKERFILE"
+cp -r "$GlobalSCRIPTDIR"/script/modules/pdepend/Dockerfile "$LocalTEMP"/"$LocalDOCKERFILE"
 
 ls -lah "$GlobalMETRICSSOURCE"
 ls -lah "$LocalTEMP"
